@@ -726,11 +726,11 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 #fh5co-gallery-list li.one-third {
-  width: 32.3%;
+  width: 100.3%;
 }
 @media screen and (max-width: 768px) {
   #fh5co-gallery-list li.one-third {
-    width: 49%;
+    width: 100%;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1056,8 +1056,8 @@ form label {
 }
 
 .couple-half {
-  width: 50%;
-  float: left;
+  width: 100%;
+  /* float: left; */
 }
 @media screen and (max-width: 768px) {
   .couple-half {
@@ -1070,7 +1070,7 @@ form label {
   font-size: 30px;
 }
 .couple-half .groom, .couple-half .bride {
-  float: left;
+  float: center;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -1086,6 +1086,15 @@ form label {
   -ms-border-radius: 50%;
   border-radius: 50%;
 }
+.vkn img{
+  /* float: center; */
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
 @media screen and (max-width: 480px) {
   .couple-half .groom, .couple-half .bride {
     width: 100%;
@@ -1098,7 +1107,7 @@ form label {
   }
 }
 .couple-half .groom {
-  float: right;
+  float: center;
   margin-right: 5px;
 }
 .couple-half .bride {
@@ -1107,12 +1116,12 @@ form label {
 }
 .couple-half .desc-groom {
   padding-right: 180px;
-  text-align: right;
+  text-align: center;
 }
-.couple-half .desc-bride {
+/* .couple-half .desc-bride {
   padding-left: 180px;
   text-align: left;
-}
+} */
 @media screen and (max-width: 480px) {
   .couple-half .groom, .couple-half .bride {
     margin-left: 0;
@@ -1200,6 +1209,10 @@ form label {
   letter-spacing: 2px;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.4);
+}
+
+.vkn img{
+  border-radius: 50%;
 }
 
 #fh5co-testimonial .wrap-testimony {
