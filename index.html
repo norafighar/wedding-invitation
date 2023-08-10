@@ -68,6 +68,12 @@
 	<body>
 
 	<div id="fakeButton" tabindex="0" style="position: absolute; top: -9999px; left: -9999px;">Focus me!</div>
+
+	<!-- <audio id="audioPlayer" controls>
+
+		<source src="song.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+	</audio> -->
 		
 	<div class="fh5co-loader"></div>
 	<div class="text-center" style="background-color:#f1f3f4;"> 
@@ -75,8 +81,9 @@
 			<source src="song.mp3" type="audio/mpeg">
 		</audio>
 	</div>
-	
 	<div id="page">
+		
+		
 	<nav class="fh5co-nav" role="navigation">
 		<div class="container">
 			<div class="row">
@@ -102,7 +109,7 @@
 									<!-- <div class="simply-section simply-days-section"><div></div><span class="simply-amount">8</span></div></div> -->
 								
 							</div>
-							<p><a href="#" class="btn btn-default btn-sm">Save the date</a></p>
+							<p><a href="home.html?autoplay=true" class="btn btn-default btn-sm" id="playButton">Save the date</a></p>
 						</div>
 					</div>
 				</div>
@@ -121,30 +128,35 @@
 				</div>
 			</div>
 			<div class="couple-wrap animate-box">
-				<div class="couple-half">
-					<div class="couple-half">
-						<div class="bride">
-							<img src="images/bride.jpg" alt="groom" class="img-responsive">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+						<div class="vkn">
+							<img src="images/bride.jpg" class="rounded mx-auto d-block" alt="...">
+						</div><br>
+						<div class="couple-half">
+							<div class="couple-half">
+								<div class="desc-bride">
+									<h3>Noraniza Bahrotul Ilmi</h3>
+									<p>Putri pertama dari Bapak Rohim & Ibu Siti Nurani</p>
+									<p>Dusun Kauman Ngunut,Tulungagung</p>
+								</div>
+							</div>
 						</div>
-						<div class="desc-bride">
-							<h3>Noraniza Bahrotul Ilmi</h3>
-							<p>Putri pertama dari Bapak Rohim & Ibu Siti Nurani</p>
-							<p>Dusun Kauman Ngunut,Tulungagung</p>
+						<h2>&</h2>
+						<div class="vkn">
+							<img src="images/groom.jpg" class="rounded mx-auto d-block" alt="...">
+						</div><br>
+						<div class="couple-half">
+							<div class="couple-half">
+								<div class="desc-bride">
+									<h3>Nizarkasyi Fighar Prasetya</h3>
+									<p>Putra pertama Bapak Heru Dwi Prasetya & Ibu Siti Nurahmawati</p>
+									<p>Sambirejo,Pasuruan</p>
+								</div>
+							</div>
 						</div>
-					</div>
-					
-				</div>
-				<p class="heart text-center"><i class="icon-heart2"></i></p>
-				<div class="couple-half">
-					<div class="groom">
-						<img src="images/groom.jpg" alt="groom" class="img-responsive">
-					</div>
-					<div class="desc-groom">
-						<h3>Nizarkasyi Fighar Prasetya</h3>
-						<p>Putra pertama Bapak Heru Dwi Prasetya & Ibu Siti Nurahmawati</p>
-						<p>Sambirejo,Pasuruan</p>
-					</div>
-				</div>
+					</div>							
+				</div>				
 			</div>
 		</div>
 	</div>
@@ -396,6 +408,7 @@
     });
 </script>
 <script type="text/javascript">
+
 	var audio = document.getElementById('audioPlayer');
         var fakeButton = document.getElementById('fakeButton');
         
@@ -409,9 +422,14 @@
         
         setTimeout(function() {
             fakeButton.focus();
-        }, 3000);
-	
+        }, 3000); 
+
 	var x = setInterval(function() {
+
+		var audio = document.getElementById('audioPlayer');
+
+		if(audio){
+            audio.play();}
 
 		var countDownDate = new Date("Aug 22, 2023 8:00:00").getTime();
 		var now = new Date().getTime();
